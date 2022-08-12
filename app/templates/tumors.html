@@ -36,7 +36,7 @@ Brain Tumors Classification
 
 <br>
 <h3> Let's Go!</h3>
-<form action="http://127.0.0.1:5000/tumors-result" method="POST" enctype = "multipart/form-data">
+<form action="{{ url_for('upload_tumors') }}" method="POST" enctype = "multipart/form-data">
     <input type = "file" name = "file" />
     <br>
     <input type = "submit"/>
