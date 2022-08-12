@@ -18,9 +18,9 @@ def predict_bird(file_path):
     image_height = 128
     image_width = 128
     # load the model and dict for predictions
-    model = models.load_model(r'app/main/model_artifacts/birds_final_model.h5')
+    model = models.load_model(r'/app/main/model_artifacts/birds_final_model.h5')
 
-    dict_path = r'app/main/model_artifacts/birds_dict.pickle'
+    dict_path = r'/app/main/model_artifacts/birds_dict.pickle'
     with open(dict_path, 'rb') as handle:
         class_dict = pickle.load(handle)
 
@@ -49,7 +49,7 @@ def predict_pets(file_path):
     image_width = 150
 
     # load the model
-    model = models.load_model(r'app/main/model_artifacts/dogscats_final.h5')
+    model = models.load_model(r'/app/main/model_artifacts/dogscats_final.h5')
 
     # preprocess the image
     image = load_img(file_path, target_size=(image_height, image_width))
@@ -77,9 +77,9 @@ def predict_tumors(file_path):
     image_width = 128
 
     # load the model and dict for predictions
-    model = models.load_model(r'app/main/model_artifacts/brain_tumor_baseline.h5')
+    model = models.load_model(r'/app/main/model_artifacts/brain_tumor_baseline.h5')
 
-    dict_path = r'app/main/model_artifacts/tumors_dict.pickle'
+    dict_path = r'/app/main/model_artifacts/tumors_dict.pickle'
     with open(dict_path, 'rb') as handle:
         class_dict = pickle.load(handle)
 
