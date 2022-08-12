@@ -48,11 +48,13 @@ def predict_pets(file_path):
     image_height = 150
     image_width = 150
 
+    # preprocess the image
+    image = load_img(file_path, target_size=(image_height, image_width))
+    
     # load the model
     model = models.load_model(r'app/main/model_artifacts/dogscats_final.h5')
 
-    # preprocess the image
-    image = load_img(file_path, target_size=(image_height, image_width))
+    
 
     # convert image to array & clip to 0-1 range
     image = img_to_array(image)
