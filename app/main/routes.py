@@ -43,8 +43,8 @@ def upload_birds():
         if f and allowed_file(f.filename):
             filename = secure_filename(f.filename)
             file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-            f.save(file_path)
-        prediction = predict_bird(file_path.replace("\\","/"))
+            f.save(file_path.replace("\\","/"))
+        prediction = predict_bird(file_path)
         # replace sumn
         start = ".."
         file_path = start + file_path[3:]
