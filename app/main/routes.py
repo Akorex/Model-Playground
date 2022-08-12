@@ -44,7 +44,7 @@ def upload_birds():
             filename = secure_filename(f.filename)
             file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             f.save(file_path)
-        prediction = predict_bird(file_path)
+        prediction = predict_bird(file_path.replace("\\","/"))
         # replace sumn
         start = ".."
         file_path = start + file_path[3:]
@@ -75,7 +75,7 @@ def upload_pets():
         if f and allowed_file(f.filename):
             filename = secure_filename(f.filename)
             file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-            f.save(file_path)
+            f.save(file_path.replace("\\","/"))
         prediction = predict_pets(file_path)
 
         # replace sumn
@@ -109,7 +109,7 @@ def upload_tumors():
         if f and allowed_file(f.filename):
             filename = secure_filename(f.filename)
             file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-            f.save(file_path)
+            f.save(file_path.replace("\\","/"))
         prediction = predict_tumors(file_path)
         
         # replace sumn
