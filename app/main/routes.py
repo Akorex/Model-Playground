@@ -8,7 +8,7 @@ from app.main.test import predict_bird, predict_pets, predict_tumors
 
 
 # utility code
-UPLOAD_FOLDER = r"app\uploads"
+UPLOAD_FOLDER = r"app/uploads"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 ALLOWED_EXTENSIONS = set(['jpg', 'jpeg'])
 def allowed_file(filename): 
