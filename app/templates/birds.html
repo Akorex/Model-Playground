@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Bird Species Classification
+{% endblock %}
+
+{% block page_content %}
+<h2> Bird Species Classification</h2>
+<p> The functionality of this project is to allow you identify the particular specie of bird by uploading
+    pictures.
+</p>
+<br>
+
+<h3> How This Works</h3>
+<p>
+    1. The button below prompts you to upload the picture of a bird. The allowed extensions
+    are JPG and JPEG only. </p>
+    <p> 
+        2. The image you upload will be fed into an ML model which has been trained to recognize
+        400 different species of birds. Due to the probabilistic nature of ML models and limits on computational resource for training, 
+        please do ensure the image you upload is of a bird.
+    </p>
+    <p>
+         3. As the number of bird species in reality are far greater than 400 which was available for training, do not expect this to work for all bird.
+        Some bird species might be misclassified.
+    </p>
+    <p>
+        4. After the prediction is carried out, the application will show you the image you have uploaded and
+    will tell you your prediction.
+
+    To get the best results, do ensure you upload the picture of a bird. More bird species and functionality will be added over time.
+    </p>
+    <br>
+
+<h3> Let's Go!</h3>
+<form action="http://127.0.0.1:5000/birds-result" method="POST" enctype = "multipart/form-data">
+    <input type = "file" name = "file" />
+    <br>
+    <input type = "submit"/>
+</form>
+</p>
+{% endblock %}

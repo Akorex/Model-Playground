@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Brain Tumors Classification
+{% endblock %}
+
+{% block page_content %}
+<h2> Brain Tumors Classification</h2>
+<p> The functionality of this project is to allow you identify a particular brain by uploading
+    picture of an MRI scan.
+</p>
+<br>
+
+<h3> How This Works</h3>
+<p>
+    1. The button below prompts you to upload the picture of an MRI scan. The allowed extensions
+    are JPG and JPEG only.
+</p>
+<p>
+    2. The image you upload will be fed into an ML model which has been trained to recognize
+    different kinds of brain tumors. Due to the probabilistic nature of ML models and limits on computational resource for training, 
+    please do ensure the image you upload is of a bird.
+
+    Another limitation also is due to the dataset size and lack of domain knowledge in the topic. The model
+    might not correctly predict all brain tumor types.
+    The brain tumor types we had for training are: glioma_tumor, meningioma_tumor, and pituitary_tumor.
+    If no tumor is present, the model will output the prediction - no tumor
+
+</p>
+<p> 
+    3. After the prediction is carried out, the application will show you the image you have uploaded and
+    will tell you your prediction.
+    To get the best results, do ensure you upload the picture of an MRI scan. 
+    Imrpovements to the model's predictions and more functionality will be added over time.
+</p>
+
+<br>
+<h3> Let's Go!</h3>
+<form action="http://127.0.0.1:5000/tumors-result" method="POST" enctype = "multipart/form-data">
+    <input type = "file" name = "file" />
+    <br>
+    <input type = "submit"/>
+</form>
+</p>
+
+{% endblock %}

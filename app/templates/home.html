@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Model Playground
+{% endblock %}
+
+{% block page_content %}
+<h2> 
+    Welcome to Model Playground
+</h2>
+<p>This is where the Computer Vision models built will be tested in an interactive manner with
+    the help of Flask framework. Another web app will be built to focus on the tasks in the area of 
+    Natural Language Processing and also with ML on Tabular Data.
+</p>
+<p>The models built and featured here are quite simple and would be updated with
+    more helpful and complex ones. The models are neural networks which would perform the task of 
+    classification, segmentation and even image captioning. They were built with the use of the 
+    wonderful Machine Learning library, TensorFlow, and other frameworks/libraries. The datasets used 
+    for training and the training notebooks are featured in each project task directory on the 
+    GitHub page where this simple web app is hosted.
+</p>
+
+<p> The projects present on this model playground are:
+    <ul>
+        <li> <a href='/birds-species'> Birds Species </a></li>
+        <li> <a href='/tumors'> Brain Tumors </a></li>
+        <li> <a href='/cats-dogs'> Cats and Dogs </a></li>
+    </ul>
+
+    Each Project will discuss its own limitation, usage and future works expectd. In summary, the Bird Species page 
+    will allow you to upload the picture of a bird and it will tell you what kind of specie of bird it is. 
+    The Cats and Dogs page will allow you to upload the picture of a dog or a cat and it'll tell you which it is.
+    And finally, the Brain Tumors page will allow you to upload picture of a brain MRI scan and it'll 
+    tell you what kind of brain tumor is present.
+</p>
+{% endblock %}

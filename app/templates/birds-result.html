@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Birds Result Page
+{% endblock %}
+
+{% block page_content %}
+
+<h4> You have uploaded a picture of {{prediction}}</h4>
+
+<img src="{{ url_for('static', filename=file_path) }}" alt="bird-picture" height="500" width="500"/>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Cats and Dogs Classification
+{% endblock %}
+
+{% block page_content %}
+<h2> Pets Classification</h2>
+<p> The functionality of this project is to allow you identify the type of specie - Dogs and Cats by uploading
+    pictures.
+</p>
+<br>
+
+<h3> How This Works</h3>
+<p>
+    1. The button below prompts you to upload the picture of a pet - a cat or a dog. The allowed extensions
+    are JPG and JPEG only. </p>
+<p> 
+    2. The image you upload will be fed into an ML model which has been trained to recognize either a cat or a dog.
+    Due to the probabilistic nature of ML models and limits on computational resource for training, 
+    please do ensure the image you upload is of a cat or a dog. 
+    Note: Any picture which does not contain a cat or a dog will result in a prediction of a cat.
+    </p>
+<p> 3. After the prediction is carried out, the application will show you the image you have uploaded and
+    will tell you what it has seen.
+
+    More functionality will be added over time.
+</p>
+<br>
+
+<h3> Let's Go!</h3>
+<form action="http://127.0.0.1:5000/pets-result" method="POST" enctype = "multipart/form-data">
+    <input type = "file" name = "file" />
+    <br>
+    <input type = "submit"/>
+</form>
+</p>
+
+{% endblock %}
