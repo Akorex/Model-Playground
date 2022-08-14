@@ -8,3 +8,5 @@ This repository contains ML models and artifacts and other necessary code requir
 You can play with the models on the deployed [heroku page](https://ml-model-playground.herokuapp.com/home). 
 
 Technologies used for this include TensorFlow, Git LFS, Flask & Heroku.
+
+Article detailing issues with [this project](https://akoredeadewole3.medium.com/what-i-learned-deploying-my-first-deep-learning-models-to-heroku-30a64a1e57ad?source=your_stories_page-------------------------------------)
